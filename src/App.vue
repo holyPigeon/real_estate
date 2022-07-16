@@ -1,26 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <Navbar></Navbar>
+    <img alt="Vue logo" src="./assets/logo.png">
+
+    <div v-for="(r, i) in $store.state.roomList" :key="i">
+      <Post :room="r"/>
+    </div>
+
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from './components/Navbar.vue'
+import Post from './components/Post.vue'
 
 export default {
   name: 'App',
+  data() {
+    return {
+
+    }
+  },
   components: {
-    HelloWorld
+    Navbar,
+    Post
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  margin: 0 auto;
 }
 </style>

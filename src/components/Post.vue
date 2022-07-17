@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <img :src="room.image">
-    <p>{{ room.content }}</p>
-  </div>
+    <div style="text-align: center;">
+        <img :src="room.image" class="w-75 mt-80">
+        <p>{{ room.content }}</p>
+    </div>
 </template>
 
 <script>
@@ -15,5 +15,12 @@ export default {
 </script>
 
 <style>
+.room-img {
+    width: 70%;
+    margin-top: 40px;
+}
 
+.mt-80 {
+    margin-top: 80px;
+}
 </style>

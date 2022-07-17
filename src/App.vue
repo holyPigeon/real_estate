@@ -1,10 +1,12 @@
 <template>
   <div>
     <Navbar></Navbar>
-    <img alt="Vue logo" src="./assets/logo.png">
+    <div style="text-align: center;">
+      <img alt="Vue logo" src="./assets/logo.png">
+    </div>
 
     <div v-for="(r, i) in $store.state.roomList" :key="i">
-      <Post :room="r"/>
+      <Post :room="r" />
     </div>
 
   </div>
@@ -29,6 +31,10 @@ export default {
 </script>
 
 <style>
+/* div {
+  border: 1px solid black;
+} */
+
 body {
   margin: 0 auto;
 }

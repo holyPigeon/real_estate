@@ -1,5 +1,7 @@
 import { createStore } from 'vuex'
 import roomList from './assets/roomList'
+import bootstrap from 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const store = createStore({
     state() {
@@ -9,7 +11,7 @@ const store = createStore({
         }
     },
     mutations: {
-
+        
     },
     computed: {
 

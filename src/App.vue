@@ -1,7 +1,9 @@
 <template>
   <div>
     <Navbar></Navbar>
-    <div style="text-align: center;">
+    <!-- Button trigger modal -->
+    <Modal></Modal>
+    <div class="text-center mt-5">
       <img alt="Vue logo" src="./assets/logo.png">
     </div>
 
@@ -15,17 +17,22 @@
 <script>
 import Navbar from './components/Navbar.vue'
 import Post from './components/Post.vue'
+import Modal from './components/Modal'
 
 export default {
   name: 'App',
   data() {
     return {
-
+    }
+  },
+  methods: {
+    modalShow() {
     }
   },
   components: {
     Navbar,
-    Post
+    Post,
+    Modal
   }
 }
 </script>

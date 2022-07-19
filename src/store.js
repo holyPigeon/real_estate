@@ -8,10 +8,13 @@ const store = createStore({
         return {
             menus: ['home', 'login', 'register'],
             roomList: roomList,
+            selectedRoomId: 0, 
         }
     },
     mutations: {
-        
+        selectRoom(state, roomId) {
+            state.selectedRoomId = roomId;
+        }
     },
     computed: {
 

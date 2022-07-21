@@ -19,6 +19,9 @@ const store = createStore({
         },
         goToPage(state, num) {
             state.page = num;
+        },
+        popImage(state , percent) {
+            state.popStyle = `opacity: ${percent}%;`;
         }
     },
     computed: {

@@ -9,11 +9,16 @@ const store = createStore({
             menus: ['home', 'login', 'register'],
             roomList: roomList,
             selectedRoomId: 0, 
+            popStyle: "",
+            page: 0,
         }
     },
     mutations: {
         selectRoom(state, roomId) {
             state.selectedRoomId = roomId;
+        },
+        goToPage(state, num) {
+            state.page = num;
         }
     },
     computed: {

@@ -1,14 +1,18 @@
 <template>
   <div>
     <Navbar></Navbar>
-    <!-- Button trigger modal -->
-    <Modal></Modal>
-    <div class="text-center p-5 border-gray">
-      <img alt="Vue logo" src="./assets/logo.png">
-    </div>
+    <div v-if="page == 0">
+      <Modal></Modal>
+      <div class="text-center p-5 border-gray">
+        <img alt="Vue logo" src="./assets/logo.png">
+      </div>
 
-    <div v-for="(r, i) in $store.state.roomList" :key="i">
-      <Post :room="r" class="border-gray" />
+      <div v-for="(r, i) in $store.state.roomList" :key="i">
+        <Post :room="r" class="border-gray" />
+      </div>
+    </div>
+    <div v-if="page == 1">
+      <Publish></Publish>
     </div>
 
   </div>
@@ -18,12 +22,17 @@
 import Navbar from './components/Navbar.vue'
 import Post from './components/Post.vue'
 import Modal from './components/Modal'
+import Publish from './components/Publish.vue'
+import { mapState } from 'vuex'
 
 export default {
   name: 'App',
   data() {
     return {
     }
+  },
+  computed: {
+    ...mapState(['page']),
   },
   methods: {
     modalShow() {
@@ -32,8 +41,9 @@ export default {
   components: {
     Navbar,
     Post,
-    Modal
-  }
+    Modal,
+    Publish
+}
 }
 </script>
 

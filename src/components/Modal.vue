@@ -13,8 +13,9 @@
                     <div class="modal-body">
                         <img :src="$store.state.roomList[selectedRoomId].image" class="w-100 mb-4">
                         {{ $store.state.roomList[selectedRoomId].content }} <br>
-                        {{ $store.state.roomList[selectedRoomId].price * month}} 원 <br>
-                        <input type="text" v-model="month"> 개월
+  
+                        <input type="text" v-model="month"> 개월  <br>
+                                              {{ $store.state.roomList[selectedRoomId].price * month}} 원
                     </div>
                     <div class="modal-footer">
                         <div class="col text-center">

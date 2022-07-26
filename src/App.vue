@@ -35,8 +35,6 @@ export default {
     ...mapState(['page']),
   },
   methods: {
-    modalShow() {
-    }
   },
   components: {
     Navbar,
